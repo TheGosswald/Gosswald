@@ -1,0 +1,118 @@
+/* ===========================
+   Coaching Section
+   =========================== */
+.coaching {
+  background-color: var(--bg-primary);
+}
+
+.coaching__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.coaching__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.75rem;
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+
+.coaching__card:hover {
+  border-color: var(--accent-border);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+}
+
+.coaching__card-icon {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.coaching__card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.coaching__card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Client ribbon */
+.coaching__clients {
+  margin-top: 4rem;
+}
+
+.coaching__clients-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+}
+
+/* Outer mask — fades edges */
+.coaching__ribbon-wrap {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+/* Scrolling track — doubled items for seamless loop */
+.coaching__ribbon-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: ribbonScroll 28s linear infinite;
+}
+
+.coaching__ribbon-wrap:hover .coaching__ribbon-track {
+  animation-play-state: paused;
+}
+
+@keyframes ribbonScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Individual logo */
+.coaching__ribbon-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.coaching__ribbon-item img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.coaching__ribbon-item:hover img {
+  opacity: 1;
+}
+
+
