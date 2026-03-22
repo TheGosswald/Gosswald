@@ -35,7 +35,16 @@ export default function Navbar() {
   const handleNavClick = (href) => {
     setMenuOpen(false)
     const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth' })
+    // After smooth scroll lands, reveal any elements now in viewport
+    setTimeout(() => {
+      const vh = window.innerHeight
+      document.querySelectorAll('.reveal:not(.visible)').forEach(revealEl => {
+        const r = revealEl.getBoundingClientRect()
+        if (r.top < vh && r.bottom > 0) revealEl.classList.add('visible')
+      })
+    }, 800)
   }
 
   return (

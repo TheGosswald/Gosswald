@@ -119,26 +119,12 @@ export default function CV() {
   return (
     <section className="cv section" id="cv" ref={sectionRef}>
       <div className="container">
-        <div className="cv__top section-header reveal">
-          <div>
-            <p className="section-label">03. Experience</p>
-            <h2 className="section-title">My journey</h2>
-            <p className="section-subtitle">
-              Where I've worked and studied, and what I've built along the way.
-            </p>
-          </div>
-          <a
-            className="btn btn-outline cv__download"
-            href="/Head of Data CV.pdf"
-            download="Gustav_Osswald_CV.pdf"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Download CV
-          </a>
+        <div className="section-header reveal">
+          <p className="section-label">03. Experience</p>
+          <h2 className="section-title">My journey</h2>
+          <p className="section-subtitle">
+            Where I've worked and studied, and what I've built along the way.
+          </p>
         </div>
 
         <div className="cv__columns">

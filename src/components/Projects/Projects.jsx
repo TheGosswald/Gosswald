@@ -3,9 +3,9 @@ import './Projects.css'
 
 const PROJECTS = [
   {
-    title: 'Artuit',
+    title: 'Artuid',
     description:
-      'AI-powered art robot built on IBM Watson. Generates unique generative artwork by combining machine learning models with creative algorithms — exploring the intersection of artificial intelligence and artistic expression.',
+      'AI-powered art robot built on IBM Watson. Generates unique generative artwork by combining machine learning models with creative algorithms, exploring the intersection of artificial intelligence and artistic expression.',
     tags: ['IBM Watson', 'AI', 'Generative Art', 'Machine Learning'],
     category: 'AI',
     github: null,

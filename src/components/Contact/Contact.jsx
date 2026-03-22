@@ -24,8 +24,8 @@ const LINKS = [
   },
   {
     label: 'Email',
-    value: 'gustav.osswald@gmail.com',
-    href: 'mailto:gustav.osswald@gmail.com',
+    value: 'thegosswald@gmail.com',
+    href: 'mailto:thegosswald@gmail.com',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -66,12 +66,12 @@ export default function Contact() {
           <p className="contact__body reveal reveal-delay-2">
             Whether you're looking for a data strategy advisor, exploring a
             mentoring or coaching engagement, or want to discuss a leadership
-            opportunity — I'd love to connect. My inbox is always open.
+            opportunity, I'd love to connect. My inbox is always open.
           </p>
 
           <a
             className="btn btn-primary contact__cta reveal reveal-delay-3"
-            href="mailto:gustav.osswald@gmail.com"
+            href="mailto:thegosswald@gmail.com"
           >
             Say hello
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">

@@ -85,9 +85,6 @@
   animation: ribbonScroll 28s linear infinite;
 }
 
-.coaching__ribbon-wrap:hover .coaching__ribbon-track {
-  animation-play-state: paused;
-}
 
 @keyframes ribbonScroll {
   from { transform: translateX(0); }
@@ -104,15 +101,10 @@
 }
 
 .coaching__ribbon-item img {
-  height: 48px;
+  height: 58px;
   width: auto;
   object-fit: contain;
-  opacity: 0.75;
-  transition: opacity var(--transition);
-}
-
-.coaching__ribbon-item:hover img {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 

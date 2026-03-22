@@ -157,7 +157,7 @@ export default function Mentoring() {
           </div>
           <a
             className="btn btn-primary mentoring__cta"
-            href="mailto:gustav.osswald@gmail.com?subject=Mentoring%20Enquiry"
+            href="mailto:thegosswald@gmail.com?subject=Mentoring%20Enquiry"
           >
             Get in touch
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
