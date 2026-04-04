@@ -11,6 +11,8 @@ const PROJECTS = [
     github: null,
     live: null,
     featured: true,
+    gradient: 'linear-gradient(135deg, #1a0535 0%, #0e1448 50%, #0a1e38 100%)',
+    accentRgb: '160, 80, 240',
   },
   {
     title: 'Gosswald',
@@ -21,6 +23,8 @@ const PROJECTS = [
     github: 'https://github.com/TheGosswald/Gosswald',
     live: null,
     featured: true,
+    gradient: 'linear-gradient(135deg, #041810 0%, #07182a 50%, #0a1b35 100%)',
+    accentRgb: '101, 188, 123',
   },
 ]
 
@@ -100,12 +104,20 @@ export default function Projects() {
 }
 
 function ProjectCard({ project, index }) {
-  const { title, description, tags, github, live, featured } = project
+  const { title, description, tags, github, live, featured, gradient, accentRgb } = project
 
   return (
     <article
       className={`project-card reveal reveal-delay-${(index % 4) + 1}${featured ? ' project-card--featured' : ''}`}
     >
+      {/* Visual preview band */}
+      <div className="project-card__preview" style={{ background: gradient }}>
+        <div
+          className="project-card__preview-glow"
+          style={{ background: `radial-gradient(circle at 60% 40%, rgba(${accentRgb}, 0.55) 0%, transparent 70%)` }}
+        />
+      </div>
+
       {featured && <span className="project-card__badge">Featured</span>}
 
       <div className="project-card__header">

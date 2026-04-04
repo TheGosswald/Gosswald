@@ -43,7 +43,7 @@
 /* Card */
 .project-card {
   position: relative;
-  background: var(--bg-card);
+  background: linear-gradient(160deg, #132032 0%, #0f1c2e 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
@@ -51,12 +51,47 @@
   flex-direction: column;
   gap: 0.75rem;
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
 }
 
 .project-card:hover {
   border-color: var(--accent-border);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px var(--accent-border),
+    0 0 50px rgba(101, 188, 123, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Preview band */
+.project-card__preview {
+  height: 150px;
+  margin: -1.75rem -1.75rem 1.5rem;
+  border-radius: calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px) 0 0;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-card__preview::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(255, 255, 255, 0.025) 28px, rgba(255, 255, 255, 0.025) 29px),
+    repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(255, 255, 255, 0.025) 28px, rgba(255, 255, 255, 0.025) 29px);
+}
+
+.project-card__preview-glow {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card:hover .project-card__preview-glow {
+  transform: scale(1.12);
 }
 
 .project-card--featured {
@@ -67,6 +102,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 1;
   font-family: var(--font-mono);
   font-size: 0.65rem;
   text-transform: uppercase;
